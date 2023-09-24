@@ -1,0 +1,18 @@
+---
+import Button from "../components/Button.astro"
+import { Image } from 'astro:assets'
+
+const { Headline, Img, Desc} = Astro.props
+---
+<div class="border-2 border-black rounded flex flex-col">
+
+    <Image src={Image} alt="Card text" />
+
+    <h3>{Headline}</h3>
+
+
+    <p>{Desc}</p>
+
+    <Button />
+
+</div>

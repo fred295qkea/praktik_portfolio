@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1,
+h2,
+h3 {
+  font-family: "Quantico", sans-serif;
+}
+
+p,
+a {
+  font-family: "Pridi", serif;
+}
+
+.card_display {
+  @apply border-2 border-black rounded-md flex flex-col;
+}

@@ -1,7 +1,99 @@
 ---
 import Mainlayout from "../layouts/Mainlayout.astro"
+import Header from "../components/Header.astro"
+import { Image } from 'astro:assets'
+import Site from "../assets/Site.webp"
+import Todo from "../assets/Todo.png"
+import VMK from "../assets/om_os.webp"
+import Kune from "../assets/ungdomsoen.jpeg"
+import Button from "../components/Button.astro"
+import Footer from "../components/Footer.astro"
 ---
 <Mainlayout>
+
+	<Header />
+
+
+	<h1 class="text-center">Portfolio</h1>
+	<div class="mx-10 shadow-[0.35rem_0.35rem_#121212]">
+		<Image src={Site} alt="Profile pic"/>
+	</div>
+
+	<div class="text-center m-4 border-2 border-black rounded-md">
+		<p>
+			En frontend developer med en passion og lyst til at efterlade et intryk via websites
+		</p>
+	</div>
+
+	<h2 class="text-center">Projekter</h2>
+
+
+<div class="w-full flex align-stretch flex-col justify-around md:flex-row md:flex-nowrap">
+
+
+		<div class="card_display p-3 m-4 ">
+		<Image src={Todo} alt="Todo app" />
+		<h2>Todo-App</h2>
+		<p>Todo-appen er det første projekt som jeg lavede på Frontend valgfaget på KEA. Todo-appen er bygget med Localstorage og bruger meget array metoder.</p>
+
+		<Button link="https://github.com/fred295qkea/todo" />
+		</div>
+
+		<div class="card_display p-3 m-4 ">
+		<Image src={VMK} alt="Verdens mindste kulturhus" />
+		<h2>Verdens mindste kulturhus</h2>
+		<p>Verdens mindste kulturhus projektet var det projekt som jeg og min gruppe gik til eksamen med i andet semester. I denne opgave udarbejdede vi en hjemmeside samt content og contentplan til Verdens mindste kulturhus</p>
+
+		<Button link="https://github.com/LauraLiv/vmk" />
+		</div>
+
 	
+
+		<div class="card_display p-3 m-4 ">
+		<Image src={Kune} alt="Kune festival" />
+		<h2>Kune festival</h2>
+		<p>I andet semester lavede vi et projekt for Kune festival, som er en festival som finder sted på Ungdomsøen. I projektet redesignede vi Kune festivals hjemmeside og gav vores bud på en ny.</p>
+
+		<Button link="https://github.com/fred295qkea/kune-festival" />
+	</div>
+</div>
+
+<div>
+	<h2 class="text-center">Who am I?</h2>
+	<p class="m-4 p-3">Jeg er en 21 årig knægt, som har en kæmpe interesse inde for hjemmesider. Jeg elsker at lave ting, hvor jeg kan sætte mit præg på tingene og efterlade brugeren med et indtryk. Jeg har massere mod på at lære fra andre og tror på at man aldrig kan blive god nok! I min fritid dyrker jeg meget mine relationer, både med venner samt igennem fodbold. Jeg er et glad og smilende menneske, som elsker at interagere med andre mennesker.</p>
+
+	<div class=" border-2 border-black rounded-md p-3 m-4">
+	<h2 class="text-center">Færdigheder</h2>
+	<p>Her er nogle af de teknologier som jeg har arbejdet med:</p>
+	<div class="space-y-4">
+		<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>HTML & CSS</p>
+		</div>
+		<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>Javascript</p>
+		</div>
+		<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>Astro</p>
+		</div>
+		<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>Tailwind CSS</p>
+		</div>
+		<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>Figma</p>
+		</div>
+		<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>Adobe pakken</p>
+		</div>
+	</div>
+	</div>
+</div>
+
+<Footer />
 </Mainlayout>
 
