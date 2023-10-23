@@ -8,64 +8,74 @@ import VMK from "../assets/om_os.webp"
 import Kune from "../assets/ungdomsoen.jpeg"
 import Button from "../components/Button.astro"
 import Footer from "../components/Footer.astro"
+
 ---
 <Mainlayout>
 
 	<Header />
 
-
-	<h1 class="text-center">Portfolio</h1>
-	<div class="mx-10 shadow-[0.35rem_0.35rem_#121212]">
+<div class="md:grid md:grid-cols-2 md:grid-rows-2 justify-items-center items-center md:my-12 ">
+	<h1 class="aniHero text-center  text-4xl md:self-end">Frederik Jensen</h1>
+	<div class="heroImg mx-10  scale-x-[-1]  md:row-span-2 transition ease-linear duration-300">
 		<Image src={Site} alt="Profile pic"/>
 	</div>
 
-	<div class="text-center m-4 border-2 border-black rounded-md">
+	<div class="aniHeroText text-center m-4 border-2 border-black rounded-md  md:border-none md:self-start md:px-20 md:mx-20">
 		<p>
 			En frontend developer med en passion og lyst til at efterlade et intryk via websites
 		</p>
 	</div>
 
-	<h2 class="text-center">Projekter</h2>
+</div>
+
+	<h2 class="text-center text-4xl">Projekter</h2>
 
 
-<div class="w-full flex align-stretch flex-col justify-around md:flex-row md:flex-nowrap">
+<div class="projectContainer w-full flex align-stretch flex-col justify-around md:flex-row md:flex-nowrap">
 
 
-		<div class="card_display p-3 m-4 ">
-		<Image src={Todo} alt="Todo app" />
+		<div class="card_display p-3 m-4 md:w-fit">
+			<Image src={Todo} alt="Todo app" />
 		<h2>Todo-App</h2>
+		<div class="flex justify-between flex-col h-full">
 		<p>Todo-appen er det første projekt som jeg lavede på Frontend valgfaget på KEA. Todo-appen er bygget med Localstorage og bruger meget array metoder.</p>
 
 		<Button link="https://github.com/fred295qkea/todo" />
 		</div>
+		</div>
 
-		<div class="card_display p-3 m-4 ">
+		<div class="card_display p-3 m-4 md:w-fit ">
 		<Image src={VMK} alt="Verdens mindste kulturhus" />
 		<h2>Verdens mindste kulturhus</h2>
+		<div class="flex justify-between flex-col h-full">
 		<p>Verdens mindste kulturhus projektet var det projekt som jeg og min gruppe gik til eksamen med i andet semester. I denne opgave udarbejdede vi en hjemmeside samt content og contentplan til Verdens mindste kulturhus</p>
-
 		<Button link="https://github.com/LauraLiv/vmk" />
+		</div>
 		</div>
 
 	
 
-		<div class="card_display p-3 m-4 ">
+		<div class="card_display p-3 m-4 md:w-fit ">
 		<Image src={Kune} alt="Kune festival" />
+		<div class="flex justify-between flex-col h-full">
 		<h2>Kune festival</h2>
 		<p>I andet semester lavede vi et projekt for Kune festival, som er en festival som finder sted på Ungdomsøen. I projektet redesignede vi Kune festivals hjemmeside og gav vores bud på en ny.</p>
 
 		<Button link="https://github.com/fred295qkea/kune-festival" />
+		</div>
+
 	</div>
 </div>
 
-<div>
+<div class="md:bg-slate-200 md:m-10 md:mx-40 md:p-3 md:rounded-md">
 	<h2 class="text-center">Who am I?</h2>
-	<p class="m-4 p-3">Jeg er en 21 årig knægt, som har en kæmpe interesse inde for hjemmesider. Jeg elsker at lave ting, hvor jeg kan sætte mit præg på tingene og efterlade brugeren med et indtryk. Jeg har massere mod på at lære fra andre og tror på at man aldrig kan blive god nok! I min fritid dyrker jeg meget mine relationer, både med venner samt igennem fodbold. Jeg er et glad og smilende menneske, som elsker at interagere med andre mennesker.</p>
+	<div class=" md:flex md:flex-row">
+	<p class="m-4 p-3 basis-1/2">Jeg er en 21 årig knægt, som har en kæmpe interesse inde for hjemmesider. Jeg elsker at lave ting, hvor jeg kan sætte mit præg på tingene og efterlade brugeren med et indtryk. Jeg har massere mod på at lære fra andre og tror på at man aldrig kan blive god nok! I min fritid dyrker jeg meget mine relationer, både med venner samt igennem fodbold. Jeg er et glad og smilende menneske, som elsker at interagere med andre mennesker.</p>
 
-	<div class=" border-2 border-black rounded-md p-3 m-4">
+	<div class=" border-2 border-black rounded-md p-3 m-4 bg-white basis-1/2">
 	<h2 class="text-center">Færdigheder</h2>
 	<p>Her er nogle af de teknologier som jeg har arbejdet med:</p>
-	<div class="space-y-4">
+	<div class="space-y-4 md:grid grid-cols-2">
 		<div class="flex flex-row items-center">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>HTML & CSS</p>
@@ -82,6 +92,11 @@ import Footer from "../components/Footer.astro"
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Tailwind CSS</p>
 		</div>
+			<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>NPM</p>
+		</div>
+		
 		<div class="flex flex-row items-center">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Figma</p>
@@ -90,10 +105,50 @@ import Footer from "../components/Footer.astro"
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Adobe pakken</p>
 		</div>
-	</div>
+			<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>React</p>
+		</div>
+			<div class="flex flex-row items-center">
+			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
+			<p>Next.js</p>
+		</div>
+		</div>
+
 	</div>
 </div>
 
 <Footer />
 </Mainlayout>
+
+<script>
+	import { inView, animate, stagger, spring } from "motion"
+
+	window.addEventListener("load", addShadow)
+
+
+
+	function addShadow(){
+		setTimeout(() => {
+	
+		document.querySelector(".heroImg").classList.add("md:shadow-[-0.45rem_0.45rem_#121212]")
+		document.querySelector(".heroImg").classList.add("shadow-[0.35rem_0.35rem_#121212]")
+}, 500);
+	}
+
+	animate(".aniHero", {y: ["100px", "0px"], opacity: [0, 1]}, {duration: 1})
+
+	animate(".aniHeroText", {
+		y:["100px", "0px"],
+		opacity:[0, 1]
+	},{
+		duration: 1.2
+	}
+	)
+
+inView(".projectContainer", ({target}) =>{
+	animate(".card_display", {y:["400px", "0px"]}, {delay: stagger(0.1), easing:spring({damping: 13})} )
+})
+
+</script>
 
