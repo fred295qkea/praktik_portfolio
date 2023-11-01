@@ -8,6 +8,7 @@ import VMK from "../assets/om_os.webp"
 import Kune from "../assets/ungdomsoen.jpeg"
 import Button from "../components/Button.astro"
 import Footer from "../components/Footer.astro"
+import Whitespace from "../components/Whitespace.astro"
 
 ---
 <Mainlayout>
@@ -27,8 +28,11 @@ import Footer from "../components/Footer.astro"
 	</div>
 
 </div>
+<i class="fa-solid fa-chevron-down fa-2xl down hidden place-content-center md:grid cursor-pointer"></i>
 
-	<h2 class="text-center text-4xl">Projekter</h2>
+<Whitespace size="normal"/>
+
+	<h2 class="projectText text-center text-4xl">Projekter</h2>
 
 
 <div class="projectContainer w-full flex align-stretch flex-col justify-around md:flex-row md:flex-nowrap">
@@ -67,6 +71,8 @@ import Footer from "../components/Footer.astro"
 	</div>
 </div>
 
+<Whitespace size="small" />
+
 <div class="md:bg-slate-200 md:m-10 md:mx-40 md:p-3 md:rounded-md">
 	<h2 class="text-center">Who am I?</h2>
 	<div class=" md:flex md:flex-row">
@@ -76,44 +82,44 @@ import Footer from "../components/Footer.astro"
 	<h2 class="text-center">Færdigheder</h2>
 	<p>Her er nogle af de teknologier som jeg har arbejdet med:</p>
 	<div class="space-y-4 md:grid grid-cols-2">
-		<div class="flex flex-row items-center">
+		<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>HTML & CSS</p>
 		</div>
-		<div class="flex flex-row items-center">
+		<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Javascript</p>
 		</div>
-		<div class="flex flex-row items-center">
+		<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Astro</p>
 		</div>
-		<div class="flex flex-row items-center">
+		<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Tailwind CSS</p>
 		</div>
-			<div class="flex flex-row items-center">
+			<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>NPM</p>
 		</div>
 		
-		<div class="flex flex-row items-center">
+		<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Figma</p>
 		</div>
-				<div class="flex flex-row items-center">
+				<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Rest API'er</p>
 		</div>
-		<div class="flex flex-row items-center">
+		<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Adobe pakken</p>
 		</div>
-			<div class="flex flex-row items-center">
+			<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>React</p>
 		</div>
-			<div class="flex flex-row items-center">
+			<div class="flex flex-row items-center liItem">
 			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
 			<p>Next.js</p>
 		</div>
@@ -121,6 +127,8 @@ import Footer from "../components/Footer.astro"
 
 	</div>
 </div>
+
+<Whitespace />
 
 <Footer />
 </Mainlayout>
@@ -130,7 +138,9 @@ import Footer from "../components/Footer.astro"
 
 	window.addEventListener("load", addShadow)
 
-
+	document.querySelector(".down").addEventListener("click", ()=>{
+		document.querySelector(".projectText").scrollIntoView({behavior:"smooth", block:"start"});
+	})
 
 	function addShadow(){
 		setTimeout(() => {
@@ -139,6 +149,7 @@ import Footer from "../components/Footer.astro"
 		document.querySelector(".heroImg").classList.add("shadow-[0.35rem_0.35rem_#121212]")
 }, 500);
 	}
+
 
 	animate(".aniHero", {y: ["100px", "0px"], opacity: [0, 1]}, {duration: 1})
 
@@ -153,6 +164,12 @@ import Footer from "../components/Footer.astro"
 inView(".projectContainer", ({target}) =>{
 	animate(".card_display", {y:["400px", "0px"]}, {delay: stagger(0.1), easing:spring({damping: 13})} )
 })
+
+inView(".liItem", ({target}) =>{
+		animate(".liItem", {opacity:[0, 1], scale:[0, 1]}, {delay: stagger(0.1), duration: 1})
+
+}
+)
 
 </script>
 
