@@ -1,175 +1,149 @@
 ---
-import Mainlayout from "../layouts/Mainlayout.astro"
-import Header from "../components/Header.astro"
-import { Image } from 'astro:assets'
-import Site from "../assets/Site.webp"
-import Todo from "../assets/Todo.png"
-import VMK from "../assets/om_os.webp"
-import Kune from "../assets/ungdomsoen.jpeg"
-import Button from "../components/Button.astro"
-import Footer from "../components/Footer.astro"
-import Whitespace from "../components/Whitespace.astro"
+import Mainlayout from "../layouts/Mainlayout.astro";
+import Header from "../components/Header.astro";
+import { Image } from "astro:assets";
+import Site from "../assets/Site.webp";
+import Wwwolt from "../assets/wwwolt.png";
+import Pageflow from "../assets/pageflow.png";
+import Fooredo from "../assets/fooredo.png";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Whitespace from "../components/Whitespace.astro";
+import Link from "../components/Link.astro";
+import downloadGif from "../assets/cv_download.gif";
 
+const skills = ["HTML & CSS", "Javascript", "Astro", "Tailwind CSS", "UI & UX", "Figma", "Rest API'er", "Python", "React", "Next.js", "Database design", "SQL", "Web application security", "Git", "Postman test", "CI/CD pipelines", "Flask", "Datocms"];
 ---
+
 <Mainlayout>
+  <Header />
 
-	<Header />
+  <section class="md:grid md:grid-cols-2 md:grid-rows-2 justify-items-center items-center md:my-12">
+    <h1 class="aniHero text-center text-4xl md:self-end">Frederik Jensen</h1>
+    <div class="heroImg mx-10 scale-x-[-1] md:row-span-2 transition ease-linear duration-300">
+      <Image src={Site} alt="Profile pic" />
+    </div>
 
-<div class="md:grid md:grid-cols-2 md:grid-rows-2 justify-items-center items-center md:my-12 ">
-	<h1 class="aniHero text-center  text-4xl md:self-end">Frederik Jensen</h1>
-	<div class="heroImg mx-10  scale-x-[-1]  md:row-span-2 transition ease-linear duration-300">
-		<Image src={Site} alt="Profile pic"/>
-	</div>
+    <div class="aniHeroText text-center m-4 border-2 border-black rounded-md md:border-none md:self-start md:px-20 md:mx-20">
+      <p>Web developer with a multimedia background, crafting engaging and dynamic web experiences</p>
+    </div>
+  </section>
+  <i class="fa-solid fa-chevron-down fa-2xl down hidden place-content-center md:grid cursor-pointer"></i>
 
-	<div class="aniHeroText text-center m-4 border-2 border-black rounded-md  md:border-none md:self-start md:px-20 md:mx-20">
-		<p>
-			En frontend developer med en passion og lyst til at efterlade et indtryk via websites
-		</p>
-	</div>
+  <Whitespace size="normal" />
 
-</div>
-<i class="fa-solid fa-chevron-down fa-2xl down hidden place-content-center md:grid cursor-pointer"></i>
+  <h2 class="projectText text-center text-4xl">Projekter</h2>
 
-<Whitespace size="normal"/>
+  <section class="projectContainer w-full flex align-stretch flex-col justify-around md:flex-row md:flex-nowrap">
+    <div class="card_display p-3 m-4 md:w-fit">
+      <Image src={Wwwolt} alt="Todo app" />
+      <h2>WWWolt</h2>
+      <div class="flex justify-between flex-col h-full">
+        <p>The Wwwolt project is my full-stack project that my group and I created for a course during the first semester of my WEB_DEV education. The project is built in Python using the Flask framework. The backend is an SQL backend managed with phpMyAdmin.</p>
 
-	<h2 class="projectText text-center text-4xl">Projekter</h2>
+        <Link link="https://github.com/Marv0659/Web_dev_eksamen" text="Github!" />
+      </div>
+    </div>
 
+    <div class="card_display p-3 m-4 md:w-fit">
+      <Image src={Fooredo} alt="" />
+      <h2>Fooredo</h2>
+      <div class="flex justify-between flex-col h-full">
+        <p>Fooredo is my front-end project, which I independently created a new version of. This version introduced an implementation of DatoCMS and a cohesive design across both the program page and the ticket ordering page.</p>
+        <Link link="https://github.com/fred295qkea/fooredo" text="Github!" />
+      </div>
+    </div>
 
-<div class="projectContainer w-full flex align-stretch flex-col justify-around md:flex-row md:flex-nowrap">
+    <div class="card_display p-3 m-4 md:w-fit">
+      <Image src={Pageflow} alt="Pageflow" />
+      <div class="flex justify-between flex-col h-full">
+        <h2>Pageflow</h2>
+        <p>Pageflow was my exam project during the first semester of my web development studies. It was part of the UX course, where we focused on accessibility. The project was built using vanilla JavaScript and a backend system provided by our teacher. We implemented signup/login functionality, a view of all books, a loan system, and an admin dashboard.</p>
 
+        <Link link="https://github.com/Marv0659/UX_Eksamen" text="Github!" />
+      </div>
+    </div>
+  </section>
 
-		<div class="card_display p-3 m-4 md:w-fit">
-			<Image src={Todo} alt="Todo app" />
-		<h2>Todo-App</h2>
-		<div class="flex justify-between flex-col h-full">
-		<p>Todo-appen er det første projekt som jeg lavede på Frontend valgfaget på KEA. Todo-appen er bygget med Localstorage og bruger meget array metoder.</p>
+  <Whitespace size="small" />
 
-		<Button link="https://github.com/fred295qkea/todo" />
-		</div>
-		</div>
+  <section class="md:bg-slate-200 md:m-10 md:mx-40 md:p-3 md:rounded-md">
+    <h2 class="text-center">Who am I?</h2>
+    <div class="grid md:grid-cols-2 items-center">
+      <div class="md:flex p-4 md:flex-col gap-1">
+        <p class="">I am a young, passionate web developer with a natural talent for the field and a playful approach to learning. My professional curiosity constantly drives me to explore new areas within web development and expand my skills.</p>
+        <p>In my free time, I prioritize an active lifestyle through football, running, and strength training. I thrive best in social settings where I can exchange ideas and reflect on my thoughts together with others.</p>
+        <p>Over the years, I have pursued a wide range of hobbies, giving me insight into many different—and sometimes rather nerdy—subjects. I view this versatility as a strength, as it reflects my fundamental approach to new challenges: I meet them with curiosity rather than fear.</p>
+        <p>My philosophy is built on the conviction that "you can learn anything you set your mind to"—an attitude that has served me well. I strive to maintain a positive mindset in everything I do, always aiming to make the most of every situation.</p>
+      </div>
 
-		<div class="card_display p-3 m-4 md:w-fit ">
-		<Image src={VMK} alt="Verdens mindste kulturhus" />
-		<h2>Verdens mindste kulturhus</h2>
-		<div class="flex justify-between flex-col h-full">
-		<p>Verdens mindste kulturhus projektet var det projekt som jeg og min gruppe gik til eksamen med i andet semester. I denne opgave udarbejdede vi en hjemmeside samt content og contentplan til Verdens mindste kulturhus</p>
-		<Button link="https://github.com/LauraLiv/vmk" />
-		</div>
-		</div>
+      <div class="border-2 border-black rounded-md p-3 m-4 bg-white basis-1/2">
+        <h2 class="text-center">Skills</h2>
+        <p>Technologies that i have worked with:</p>
+        <div class="space-y-4 grid grid-cols-2">
+          {
+            skills.map((skill) => (
+              <div class="flex flex-row items-center liItem">
+                <div class="aspect-square bg-black w-2 h-2 mx-3" />
+                <p>{skill}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
 
-	
+  <Whitespace />
 
-		<div class="card_display p-3 m-4 md:w-fit ">
-		<Image src={Kune} alt="Kune festival" />
-		<div class="flex justify-between flex-col h-full">
-		<h2>Kune festival</h2>
-		<p>I andet semester lavede vi et projekt for Kune festival, som er en festival som finder sted på Ungdomsøen. I projektet redesignede vi Kune festivals hjemmeside og gav vores bud på en ny.</p>
-
-		<Button link="https://github.com/fred295qkea/kune-festival" />
-		</div>
-
-	</div>
-</div>
-
-<Whitespace size="small" />
-
-<div class="md:bg-slate-200 md:m-10 md:mx-40 md:p-3 md:rounded-md">
-	<h2 class="text-center">Who am I?</h2>
-	<div class=" md:flex md:flex-row">
-	<p class="m-4 p-3 basis-1/2">Jeg er en 21 årig knægt, som har en kæmpe interesse  for hjemmesider. Jeg elsker at lave ting, hvor jeg kan sætte mit præg på tingene og efterlade brugeren med et indtryk. Jeg har massere mod på at lære fra andre og tror på, at man aldrig kan blive god nok! I min fritid dyrker jeg meget mine relationer, både med venner samt igennem fodbold. Jeg er et glad og smilende menneske, som elsker at interagere med andre mennesker.</p>
-
-	<div class=" border-2 border-black rounded-md p-3 m-4 bg-white basis-1/2">
-	<h2 class="text-center">Færdigheder</h2>
-	<p>Her er nogle af de teknologier som jeg har arbejdet med:</p>
-	<div class="space-y-4 md:grid grid-cols-2">
-		<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>HTML & CSS</p>
-		</div>
-		<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>Javascript</p>
-		</div>
-		<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>Astro</p>
-		</div>
-		<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>Tailwind CSS</p>
-		</div>
-			<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>NPM</p>
-		</div>
-		
-		<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>Figma</p>
-		</div>
-				<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>Rest API'er</p>
-		</div>
-		<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>Adobe pakken</p>
-		</div>
-			<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>React</p>
-		</div>
-			<div class="flex flex-row items-center liItem">
-			<div class="aspect-square bg-black w-2 h-2 mx-3"></div>
-			<p>Next.js</p>
-		</div>
-		</div>
-
-	</div>
-</div>
-
-<Whitespace />
-
-<Footer />
+  <section class="text-center">
+    <h2 class="text-2xl">What now</h2>
+    <div class="grid place-self-center">
+      <Image src={downloadGif} alt="Confused gif" />
+    </div>
+    <div class="m-4">
+      <Link link="/cv.pdf" text="Download CV!" type="download" fileName="Frederik-Jensen-CV.pdf" />
+      <Link link="fbnj06@outlook.dk" type="Email" text="Send email!" />
+    </div>
+  </section>
 </Mainlayout>
 
+<Footer />
+
 <script>
-	import { inView, animate, stagger, spring } from "motion"
+  import { inView, animate, stagger, spring } from "motion";
 
-	window.addEventListener("load", addShadow)
+  window.addEventListener("load", addShadow);
 
-	document.querySelector(".down").addEventListener("click", ()=>{
-		document.querySelector(".projectText").scrollIntoView({behavior:"smooth", block:"start"});
-	})
+  document.querySelector(".down").addEventListener("click", () => {
+    document.querySelector(".projectText").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 
-	function addShadow(){
-		setTimeout(() => {
-	
-		document.querySelector(".heroImg").classList.add("md:shadow-[-0.45rem_0.45rem_#121212]")
-		document.querySelector(".heroImg").classList.add("shadow-[0.35rem_0.35rem_#121212]")
-}, 500);
-	}
+  function addShadow() {
+    setTimeout(() => {
+      document.querySelector(".heroImg").classList.add("md:shadow-[-0.45rem_0.45rem_#121212]");
+      document.querySelector(".heroImg").classList.add("shadow-[0.35rem_0.35rem_#121212]");
+    }, 500);
+  }
 
+  animate(".aniHero", { y: ["100px", "0px"], opacity: [0, 1] }, { duration: 1 });
 
-	animate(".aniHero", {y: ["100px", "0px"], opacity: [0, 1]}, {duration: 1})
+  animate(
+    ".aniHeroText",
+    {
+      y: ["100px", "0px"],
+      opacity: [0, 1],
+    },
+    {
+      duration: 1.2,
+    }
+  );
 
-	animate(".aniHeroText", {
-		y:["100px", "0px"],
-		opacity:[0, 1]
-	},{
-		duration: 1.2
-	}
-	)
+  inView(".projectContainer", ({ target }) => {
+    animate(".card_display", { y: ["400px", "0px"] }, { delay: stagger(0.1), easing: spring({ damping: 13 }) });
+  });
 
-inView(".projectContainer", ({target}) =>{
-	animate(".card_display", {y:["400px", "0px"]}, {delay: stagger(0.1), easing:spring({damping: 13})} )
-})
-
-inView(".liItem", ({target}) =>{
-		animate(".liItem", {opacity:[0, 1], scale:[0, 1]}, {delay: stagger(0.1), duration: 1})
-
-}
-)
-
+  inView(".liItem", ({ target }) => {
+    animate(".liItem", { opacity: [0, 1], scale: [0, 1] }, { delay: stagger(0.1), duration: 1 });
+  });
 </script>
-

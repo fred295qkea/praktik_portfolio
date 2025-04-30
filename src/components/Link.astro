@@ -1,0 +1,16 @@
+---
+const { link = "#", text, type = "regular", fileName, className = "" } = Astro.props;
+
+let href = link;
+if (type === "email" && link && !link.startsWith("mailto:")) {
+  href = `mailto:${link}`;
+}
+
+const baseClasses = "self-end border-2 border-black rounded shadow-[0.25rem_0.25rem_#121212] m-2 p-1 text-center w-20 cursor-pointer active:shadow-[0.125rem_0.125rem_#121212] active:translate-x-0.5 translate-y-0.5 hover:shadow-[0.3rem_0.3rem_#121212] ease-in";
+
+const isExternalLink = link && typeof link === "string" && link.startsWith("http");
+---
+
+<a class={`${baseClasses} ${className}`} href={href} download={type === "download" ? fileName || true : null} target={isExternalLink ? "_blank" : null} rel={isExternalLink ? "noopener noreferrer" : null}>
+  {text}
+</a>
