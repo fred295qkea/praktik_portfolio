@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import { Image } from "astro:assets";
 import Site from "../assets/Site.webp";
 import Wwwolt from "../assets/wwwolt.png";
+import BLDashboard from "../assets/BL_dashboard.png";
 import Pageflow from "../assets/pageflow.png";
 import Fooredo from "../assets/Fooredo.png";
 import Button from "../components/Button.astro";
@@ -13,7 +14,7 @@ import Link from "../components/Link.astro";
 import downloadGif from "../assets/cv_download.gif";
 import Mail from "../components/Mail.astro";
 
-const skills = ["HTML & CSS", "Javascript", "Astro", "Tailwind CSS", "UI & UX", "Figma", "Rest API'er", "Python", "React", "Next.js", "Database design", "SQL", "Web application security", "Git", "Postman test", "CI/CD pipelines", "Flask", "Datocms"];
+const skills = ["HTML & CSS", "JavaScript", "TypeScript", "React", "Next.js", "Vue", "Astro", "Tailwind CSS", "SCSS", "Shopify / Liquid", "Node.js", "Python", "Flask", "REST API'er", "SQL", "Database design", "Docker", "Prisma", "Jest", "Git", "CI/CD pipelines", "Figma", "UI & UX", "Web application security"];
 ---
 
 <Mainlayout>
@@ -26,7 +27,7 @@ const skills = ["HTML & CSS", "Javascript", "Astro", "Tailwind CSS", "UI & UX", 
     </div>
 
     <div class="aniHeroText text-center m-4 border-2 border-black rounded-md md:border-none md:self-start md:px-20 md:mx-20">
-      <p>Web developer with a multimedia background, crafting engaging and dynamic web experiences</p>
+      <p>Web developer with professional experience in e-commerce and fullstack development, building scalable solutions for well-known brands</p>
     </div>
   </section>
   <i class="fa-solid fa-chevron-down fa-2xl down hidden place-content-center md:grid cursor-pointer"></i>
@@ -37,31 +38,29 @@ const skills = ["HTML & CSS", "Javascript", "Astro", "Tailwind CSS", "UI & UX", 
 
   <section class="projectContainer w-full flex align-stretch flex-col justify-around md:flex-row md:flex-nowrap">
     <div class="card_display p-3 m-4 md:w-fit">
-      <Image src={Wwwolt} alt="Todo app" />
-      <h2>WWWolt</h2>
+      <Image src={BLDashboard} alt="BL Dashboard" />
+      <h2>BL Dashboard</h2>
       <div class="flex justify-between flex-col h-full">
-        <p>The Wwwolt project is my full-stack project that my group and I created for a course during the first semester of my WEB_DEV education. The project is built in Python using the Flask framework. The backend is an SQL backend managed with phpMyAdmin.</p>
-
-        <Link link="https://github.com/Marv0659/Web_dev_eksamen" text="Github!" />
+        <p>My bachelor project — an internal dashboard built for Black Lemon. A fullstack application with Next.js 16, React 19, Prisma and MySQL, secured with Auth0 authentication. Features data visualization with Recharts, Excel/PDF export, and Docker-based deployment.</p>
+        <Link link="https://bl-dashboard-three.vercel.app/dashboard" text="Deploy!" />
       </div>
     </div>
 
     <div class="card_display p-3 m-4 md:w-fit">
-      <Image src={Fooredo} alt="" />
+      <Image src={Fooredo} alt="Fooredo" />
       <h2>Fooredo</h2>
       <div class="flex justify-between flex-col h-full">
-        <p>Fooredo is my front-end project, which I independently created a new version of. This version introduced an implementation of DatoCMS and a cohesive design across both the program page and the ticket ordering page.</p>
-        <Link link="https://github.com/fred295qkea/fooredo" text="Github!" />
+        <p>A frontend project where I independently built a new version of a festival booking site. Features a DatoCMS integration and a cohesive design across both the program page and the ticket ordering flow.</p>
+        <Link link="https://github.com/FrederikBNJensen/fooredo" text="Github!" />
       </div>
     </div>
 
     <div class="card_display p-3 m-4 md:w-fit">
-      <Image src={Pageflow} alt="Pageflow" />
+      <Image src={Wwwolt} alt="WWWolt" />
       <div class="flex justify-between flex-col h-full">
-        <h2>Pageflow</h2>
-        <p>Pageflow was my exam project during the first semester of my web development studies. It was part of the UX course, where we focused on accessibility. The project was built using vanilla JavaScript and a backend system provided by our teacher. We implemented signup/login functionality, a view of all books, a loan system, and an admin dashboard.</p>
-
-        <Link link="https://github.com/Marv0659/UX_Eksamen" text="Github!" />
+        <h2>WWWolt</h2>
+        <p>A fullstack group project built with Python and Flask, backed by a MySQL database. Features user authentication, dynamic content rendering, and a complete CRUD flow — giving me hands-on experience with server-side development and relational databases.</p>
+        <Link link="https://github.com/Marv0659/Web_dev_eksamen" text="Github!" />
       </div>
     </div>
   </section>
@@ -72,16 +71,16 @@ const skills = ["HTML & CSS", "Javascript", "Astro", "Tailwind CSS", "UI & UX", 
     <h2 class="text-center">Who am I?</h2>
     <div class="grid md:grid-cols-2 items-center">
       <div class="md:flex p-4 md:flex-col gap-1">
-        <p class="">I am a young, passionate web developer with a natural talent for the field and a playful approach to learning. My professional curiosity constantly drives me to explore new areas within web development and expand my skills.</p>
-        <p>In my free time, I prioritize an active lifestyle through football, running, and strength training. I thrive best in social settings where I can exchange ideas and reflect on my thoughts together with others.</p>
-        <p>Over the years, I have pursued a wide range of hobbies, giving me insight into many different—and sometimes rather nerdy—subjects. I view this versatility as a strength, as it reflects my fundamental approach to new challenges: I meet them with curiosity rather than fear.</p>
-        <p>My philosophy is built on the conviction that "you can learn anything you set your mind to"—an attitude that has served me well. I strive to maintain a positive mindset in everything I do, always aiming to make the most of every situation.</p>
+        <p class="">I'm a web developer with a bachelor's degree from KEA and professional experience from Black Lemon, a Shopify agency where I've built and maintained 30+ themes for brands like Intersport, Nordgreen and Organic Basics.</p>
+        <p>I work across the full stack — from React and Next.js on the frontend to Python, Node.js and SQL databases on the backend. I'm comfortable with Docker, CI/CD pipelines and modern tooling, and I value clean, maintainable code.</p>
+        <p>Outside of work, I stay active through football, running and strength training. I thrive in social settings where I can exchange ideas and learn from others.</p>
+        <p>I approach new challenges with curiosity and a conviction that you can learn anything you set your mind to — an attitude that has served me well both professionally and personally.</p>
       </div>
 
       <div class="border-2 border-black rounded-md p-3 m-4 bg-white basis-1/2">
-        <h2 class="text-center">Skills</h2>
-        <p>Technologies that i have worked with:</p>
-        <div class="space-y-4 grid grid-cols-2">
+        <h2 class="text-center mb-4">Skills</h2>
+        <p class="mb-4">Technologies that i have worked with:</p>
+        <div class="grid grid-cols-3 gap-4">
           {
             skills.map((skill) => (
               <div class="flex flex-row items-center liItem">
